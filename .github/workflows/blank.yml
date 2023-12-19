@@ -1,37 +1,37 @@
-name: 习讯云自动签到
+姓名:习讯云自动签到
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: 0 0 * * *
+在……之上:
+workflow_dispatch:
+推:
+分支机构:
+-主要的
+计划表:
+-克朗:0 23 * * *
 
-jobs:
-  sign:
-    runs-on: ubuntu-latest
+工作:
+标志:
+run-on:ubuntu-最新
 
-    steps:
-      - uses: actions/checkout@v2
-      # 使用 node:10
-      - name: use Node.js 10.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x
-      # npm install
-      - name: 签到日志
-        env:
-          ACCOUNT: ${{ secrets.ACCOUNT }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          ADDRESS: ${{ secrets.ADDRESS }}
-          ADDRESS_NAME: ${{ secrets.ADDRESS_NAME }}
-          LATITUDE: ${{ secrets.LATITUDE }}
-          LONGITUDE: ${{ secrets.LONGITUDE }}
-          SCHOOL_ID: ${{ secrets.SCHOOL_ID }}
-          EMAIL: ${{ secrets.EMAIL }}
-          CODE: ${{ secrets.CODE }}
-          TOKEN: ${{ secrets.TOKEN }}
-        run: |
-          npm install
-          node app.js
+步骤:
+-uses:操作/签出@v2
+      #使用节点：10
+-姓名:使用Node.js10.x
+uses:操作/设置-节点@v1
+和……一起:
+节点版本:10.x
+      #npm安装
+-姓名:签到日志
+env:
+账户:${{机密.帐户}}
+密码:${{secrets.PASSWORD}}
+地址:${{机密.地址}}
+address_NAME:${{secreties.ADDRESS_NAME}}
+纬度:${{秘密.纬度}}
+经度:${{秘密.长度}}
+school_ID:${{secrets.SCHOOL_ID}}
+电子邮件:${{机密.电子邮件}}
+代码:${{机密.代码}}
+令牌:${{secrets.TOKEN}}
+跑:|
+npm安装
+节点app.js
