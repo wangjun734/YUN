@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # 使用 node:20
-      - name: use Node.js 20
+      - name: use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.x
       # npm install
       - name: 签到日志
         env:
