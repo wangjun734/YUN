@@ -34,5 +34,6 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
           npm audit fix  --force
-          npm install --no-fund
+          npm install
+          npm fund
           node app.js
