@@ -33,6 +33,6 @@ jobs:
           CODE: ${{ secrets.CODE }}
           TOKEN: ${{ secrets.TOKEN }}
         run: |
+          npm install
           npm audit fix  --force
-          npm install npm@6.14.10
           node app.js
