@@ -9,7 +9,7 @@ const loginApi = qs.loginApi
 // 签到并提交每日体温报告 
 login().then((token) => {
   sign(token)
-  studentReportInfo(token)
+  //studentReportInfo(token)
 })
 
 //登录
@@ -37,7 +37,7 @@ function sign(token) {
   })
 }
 
-//日报提交
+/*//日报提交
 function studentReportInfo(token) {
   const studentReportApi = qs.studentReportApi(token)
   const studentReportCommitApi = qs.studentReportCommitApi(token)
@@ -54,6 +54,7 @@ function studentReportInfo(token) {
   })
 }
 
+*/
 //推送微信通知
 function wechatSend(type, msg) {
   const params = {
