@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: 0 1 * * *
+    - cron: 0 23 * * *
 
 jobs:
   sign:
@@ -33,6 +33,5 @@ jobs:
           CODE: ${{ secrets.CODE }}
           TOKEN: ${{ secrets.TOKEN }}
         run: |
-          npm audit fix
           npm install
           node app.js
